@@ -1,0 +1,23 @@
+.slider-simple{
+  width: 100%;
+  height: 100vh;
+  background-color: #9b9a9c;
+
+  .container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 600vw;
+    height: 100vh;
+
+    .item{
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+      img{
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}

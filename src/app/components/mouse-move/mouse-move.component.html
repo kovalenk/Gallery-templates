@@ -1,0 +1,40 @@
+<div class="mouse-move">
+  <div class="progres-container" *ngIf="onScreen">
+    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     width="340px" height="333px" viewBox="0 0 340 333" enable-background="new 0 0 340 333" xml:space="preserve"
+         [style.transform]="'translate3d('+posX+'px, '+posY+'px, 0px)'">
+      <path
+    fill="rgba(155, 154, 156, 0)"
+    stroke="#A7989C"
+    stroke-width="2"
+    stroke-miterlimit="10"
+    d="M40 5 L75 40 L40 75 L5 40 Z"></path>
+
+      <path
+    class="path"
+    fill="rgba(155, 154, 156, 0)"
+    stroke="#ffff1b"
+    stroke-width="2"
+    stroke-miterlimit="10"
+    d="M40 5 L75 40 L40 75 L5 40 Z"></path>
+    </svg>
+    <div class="arrow-left" *ngIf="posX < innerWidth/2">
+      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     width="340px" height="333px" viewBox="0 0 340 333" enable-background="new 0 0 340 333" xml:space="preserve"
+         [style.transform]="'translate3d('+posX+'px, '+posY+'px, 0px)'">
+      <polyline
+         points="36,24 20,40 36,56"
+        style="fill:rgba(255,255,255,0); stroke:#A7989C; stroke-width:2" />
+    </svg>
+    </div>
+    <div class="arrow-right" *ngIf="posX >= innerWidth/2">
+      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     width="340px" height="333px" viewBox="0 0 340 333" enable-background="new 0 0 340 333" xml:space="preserve"
+         [style.transform]="'translate3d('+posX+'px, '+posY+'px, 0px)'">
+      <polyline
+         points="43,24 58,40 43,56"
+        style="fill:rgba(255,255,255,0); stroke:#A7989C; stroke-width:2" />
+    </svg>
+    </div>
+  </div>
+</div>

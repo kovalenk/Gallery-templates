@@ -1,0 +1,38 @@
+.path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 12s linear alternate infinite;
+  //animation-iteration-count: 2;
+  //animation-delay: 0.5s;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.mouse-move{
+  width: 100vw;
+  height: 100vh;
+  cursor: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  .progres-container{
+    transform: translate3d(-38px, -38px, 0);
+  }
+}
+
+.arrow-right{
+  position: relative;
+  top: -337px;
+  left: 1px;
+}
+
+.arrow-left{
+  position: relative;
+  top: -337px;
+  left: 1px;
+}

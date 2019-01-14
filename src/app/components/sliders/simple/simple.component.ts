@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-simple',
@@ -36,5 +36,4 @@ export class SimpleComponent implements OnInit {
 
   ngOnInit() {
   }
-
 }

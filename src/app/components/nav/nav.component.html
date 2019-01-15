@@ -1,6 +1,7 @@
 <div class="nav">
   <div class="toggle-ico" (click)="menuToggle = !menuToggle">
-
+    <img [src]="menuToggle?'../../../assets/images/nav/logo-black.png':'../../../assets/images/nav/logo-white.png'"
+          alt="Logo">
   </div>
 
   <div class="nav-component" [class.hide]="menuToggle">

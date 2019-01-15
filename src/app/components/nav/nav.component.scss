@@ -5,8 +5,7 @@
 
     &:before{
       background: rgba(21, 21, 21, 0.5);
-      left: 0;
-
+      left: 0 !important;
     }
 
     .menu-container {
@@ -14,7 +13,7 @@
       height: 100%;
 
       &:before{
-        left: 0;
+        left: 0 !important;
         background: white;
       }
     }
@@ -23,6 +22,8 @@
 
 .nav{
   position: absolute;
+  width: 100%;
+  height: 100vh;
 
   .toggle-ico {
     position: fixed;
@@ -31,6 +32,7 @@
     width: 50px;
     height: 50px;
     background-color: black;
+    cursor: pointer;
   }
 
   .nav-component {
@@ -56,7 +58,7 @@
         width: 25%;
         height: 100%;
         position: absolute;
-        left: -25%;
+        left: -25vw;
         z-index: -1;
         transition: all 0.3s ease-in;
       }

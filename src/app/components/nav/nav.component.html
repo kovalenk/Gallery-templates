@@ -1,4 +1,4 @@
-<div class="nav">
+<div class="nav" [class.nav-open]="menuToggle">
   <div class="toggle-ico" (click)="menuToggle = !menuToggle">
     <img [src]="menuToggle?'../../../assets/images/nav/logo-black.png':'../../../assets/images/nav/logo-white.png'"
           alt="Logo">
@@ -6,7 +6,21 @@
 
   <div class="nav-component" [class.hide]="menuToggle">
     <div class="menu-container">
-
+      <div class="nav-items" [class.nav-hide]="!menuToggle">
+        <div class="item" *ngFor="let items of navGroup"
+             (click)="items.dropdownToggle = !items.dropdownToggle">
+          <div class="dropdown-ico" [class.open]="items.dropdownToggle">
+            <div class="lines" *ngIf="items.dropdown"></div>
+            <div class="lines" *ngIf="items.dropdown"></div>
+          </div>
+          <span class="title">{{items.title}}</span>
+          <div class="dropdown-group" [class.dd-open]="items.dropdownToggle">
+            <div class="elem" *ngFor="let elems of items.dropdown">
+              {{elems.title}}
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

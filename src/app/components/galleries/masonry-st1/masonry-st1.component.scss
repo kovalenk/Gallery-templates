@@ -2,9 +2,9 @@
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-gap: 35px;
-  grid-template-rows: repeat(6, 1fr);
+  grid-template-rows: repeat(3, 1fr);
 
-  padding: 8px 25px;
+  padding: 8px 25px 28px;
 
   div {
     display: grid;
@@ -46,36 +46,6 @@
     &:nth-child(10) {
       grid-column: 5;
       grid-row: 2/4;
-      background-color: #f0bc2f;
-    }
-
-    &:nth-child(12) {
-      grid-column: 2;
-      grid-row: 4/6;
-      background-color: #f0bc2f;
-    }
-
-    &:nth-child(14) {
-      grid-column: 4;
-      grid-row: 4/6;
-      background-color: #f0bc2f;
-    }
-
-    &:nth-child(16) {
-      grid-column: 1;
-      grid-row: 5/7;
-      background-color: #f0bc2f;
-    }
-
-    &:nth-child(18) {
-      grid-column: 3;
-      grid-row: 5/7;
-      background-color: #f0bc2f;
-    }
-
-    &:nth-child(20) {
-      grid-column: 5;
-      grid-row: 5/7;
       background-color: #f0bc2f;
     }
   }

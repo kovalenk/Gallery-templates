@@ -8,7 +8,7 @@ import {Component, OnInit} from '@angular/core';
 export class NavComponent implements OnInit {
 
 
-  menuToggle = false;
+  menuToggle :any;
   // dropdownToggle = false;
   navGroup = [
     {
@@ -23,7 +23,7 @@ export class NavComponent implements OnInit {
       dropdown: [
         {
           title: 'Masonry - style 1',
-          link: '',
+          link: 'wedding',
         },
         {
           title: 'Masonry - style 2',
@@ -79,6 +79,7 @@ export class NavComponent implements OnInit {
   ];
 
   constructor() {
+    this.menuToggle = false;
   }
 
   ngOnInit() {

@@ -6,17 +6,21 @@ import {NavComponent} from './components/nav/nav.component';
 import {SimpleComponent} from './components/sliders/simple/simple.component';
 import {SharedModule} from "./shared/shared.module";
 import { MouseMoveComponent } from './components/mouse-move/mouse-move.component';
+import { MasonrySt1Component } from './components/galleries/masonry-st1/masonry-st1.component';
+import {AppRoutingModule} from "./app-routing.module";
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
     SimpleComponent,
-    MouseMoveComponent
+    MouseMoveComponent,
+    MasonrySt1Component
   ],
   imports: [
     BrowserModule,
-    SharedModule
+    SharedModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

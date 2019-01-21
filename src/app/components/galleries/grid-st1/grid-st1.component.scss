@@ -1,0 +1,23 @@
+section {
+
+  .grid {
+    padding: 18px 32px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 35px;
+
+    div {
+      display: grid;
+      min-height: 20vh;
+      background-color: #ff8a00;
+      text-align: center;
+      align-content: center;
+      padding: 20px;
+      font-size: 20px;
+      font-weight: 700;
+      color: #fff;
+      position: relative;
+      cursor: pointer;
+    }
+  }
+}

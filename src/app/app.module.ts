@@ -11,6 +11,7 @@ import {AppRoutingModule} from "./app-routing.module";
 import { MasonrySt2Component } from './components/galleries/masonry-st2/masonry-st2.component';
 import { MasonrySt3Component } from './components/galleries/masonry-st3/masonry-st3.component';
 import { MasonrySt4Component } from './components/galleries/masonry-st4/masonry-st4.component';
+import { GridSt1Component } from './components/galleries/grid-st1/grid-st1.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { MasonrySt4Component } from './components/galleries/masonry-st4/masonry-
     MasonrySt1Component,
     MasonrySt2Component,
     MasonrySt3Component,
-    MasonrySt4Component
+    MasonrySt4Component,
+    GridSt1Component
   ],
   imports: [
     BrowserModule,

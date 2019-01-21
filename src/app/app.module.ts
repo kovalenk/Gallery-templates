@@ -9,6 +9,7 @@ import { MouseMoveComponent } from './components/mouse-move/mouse-move.component
 import { MasonrySt1Component } from './components/galleries/masonry-st1/masonry-st1.component';
 import {AppRoutingModule} from "./app-routing.module";
 import { MasonrySt2Component } from './components/galleries/masonry-st2/masonry-st2.component';
+import { MasonrySt3Component } from './components/galleries/masonry-st3/masonry-st3.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { MasonrySt2Component } from './components/galleries/masonry-st2/masonry-
     SimpleComponent,
     MouseMoveComponent,
     MasonrySt1Component,
-    MasonrySt2Component
+    MasonrySt2Component,
+    MasonrySt3Component
   ],
   imports: [
     BrowserModule,

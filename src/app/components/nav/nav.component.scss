@@ -1,62 +1,62 @@
 @import '../../../assets/scss/variables';
 
 :host {
-  .hide {
-    width: 100%;
-    height: 100vh;
-
-    &:before {
-      background: rgba(21, 21, 21, 0.5);
-      left: 0 !important;
-    }
-
-    .menu-container {
-      width: 25%;
-      height: 100%;
-
-      &:before {
-        left: 0 !important;
-        background: white;
-      }
-    }
-  }
-}
-
-.nav-open {
-  z-index: 1;
-
-  .toggle-ico{
+  .nav-open {
+    z-index: 1;
 
     .toggle-ico {
-      position: fixed;
-      top: 50px;
-      left: 45px;
-      width: 50px;
-      height: 50px;
-      background-color: #000000;
-      cursor: pointer;
-      z-index: 1;
 
-      &:before{
-        content: "";
-        width: 100%;
-        border-top: 3px solid #ff8a00;
-        position: absolute;
-        top: 48%;
-        transform: rotate(45deg);
-        transition: all 0.6s ease-in-out 0.1s;
+      .toggle-ico {
+        position: fixed;
+        top: 50px;
+        left: 45px;
+        width: 50px;
+        height: 50px;
+        background-color: #000000;
+        cursor: pointer;
+        z-index: 1;
+
+        &:before {
+          content: "";
+          width: 100%;
+          border-top: 3px solid #ff8a00;
+          position: absolute;
+          top: 48%;
+          transform: rotate(45deg);
+          transition: all 0.6s ease-in-out 0.1s;
+        }
+
+        &:after {
+          content: "";
+          width: 100%;
+          border-top: 3px solid #ff8a00;
+          position: absolute;
+          top: 48%;
+          transform: rotate(-45deg);
+          transition: all 0.6s ease-in-out 0.1s;
+        }
+
+      }
+    }
+
+    .nav-component {
+      width: 100%;
+      height: 100vh;
+
+      &:before {
+        background: rgba(21, 21, 21, 0.5);
+        left: 0 !important;
       }
 
-      &:after{
-        content: "";
-        width: 100%;
-        border-top: 3px solid #ff8a00;
-        position: absolute;
-        top: 48%;
-        transform: rotate(-45deg);
-        transition: all 0.6s ease-in-out 0.1s;
-      }
+      .menu-container {
+        width: 25%;
+        height: 100%;
 
+        &:before {
+          left: 0 !important;
+          background: white;
+        }
+      }
     }
   }
 }
@@ -76,7 +76,7 @@
     cursor: pointer;
     z-index: 1;
 
-    &:before{
+    &:before {
       content: "";
       width: 100%;
       border-top: 3px solid #ff8a00;
@@ -87,7 +87,7 @@
       transition: all 0.25s ease-in-out;
     }
 
-    &:after{
+    &:after {
       content: "";
       width: 100%;
       border-top: 3px solid #ff8a00;
@@ -113,20 +113,20 @@
 
     &:before {
       content: "";
-      width: 100%;
-      height: 100%;
+      width: 100vw;
+      height: 100vh;
       position: absolute;
       left: -100vw;
       z-index: -1;
-      transition: all 0.6s ease-in-out 0.1s;
+      transition: all 0.55s ease-in-out 0.1s;
     }
 
     .menu-container {
       width: 25%;
       height: 100%;
 
-      .nav-hide{
-        .item{
+      .nav-hide {
+        .item {
           transform: rotateX(90deg) !important;
         }
       }
@@ -142,7 +142,6 @@
           justify-content: left;
           align-items: center;
 
-
           cursor: pointer;
           height: auto;
           min-height: 35px;
@@ -151,7 +150,7 @@
           transform: rotateX(0deg);
           transition: all 0.3s linear;
 
-          .title{
+          .title {
             font-family: $Rajdhani;
             font-weight: $font-variant-bold;
             font-size: 18px;
@@ -167,7 +166,7 @@
             flex: 8%;
 
             .lines {
-              width:14px;
+              width: 14px;
               height: 2px;
               background-color: black;
 
@@ -180,17 +179,17 @@
             }
           }
 
-          .dd-open{
+          .dd-open {
 
           }
 
-          .dropdown-group{
+          .dropdown-group {
             display: flex;
             flex-direction: column;
             flex: 100%;
             padding-left: 28%;
 
-            .elem{
+            .elem {
               width: 100%;
               display: flex;
               justify-content: left;
@@ -215,8 +214,8 @@
             }
           }
 
-          &:hover{
-            .title{
+          &:hover {
+            .title {
               color: #e03737;
             }
           }
@@ -230,7 +229,7 @@
         position: absolute;
         left: -25vw;
         z-index: -1;
-        transition: all 0.3s ease-in;
+        transition: all 0.3s ease-in 0.25s;
       }
     }
 

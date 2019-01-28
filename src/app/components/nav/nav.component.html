@@ -8,12 +8,13 @@
   <div class="nav-component">
     <div class="menu-container">
       <div class="nav-items">
-        <div class="item" *ngFor="let items of navGroup">
-          <div class="dropdown-ico">
+        <div class="item" *ngFor="let items of navGroup; index as i;"
+             [class.item__active]="active === i">
+          <div class="dropdown-ico" (click)="setActive(i)">
             <div class="lines" *ngIf="items.dropdown"></div>
             <div class="lines" *ngIf="items.dropdown"></div>
           </div>
-          <div class="title">{{items.title}}</div>
+          <div class="title" (click)="setActive(i)">{{items.title}}</div>
           <div class="dropdown-group">
             <div class="elem" *ngFor="let elems of items.dropdown" [routerLink]="elems.link" >
               {{elems.title}}

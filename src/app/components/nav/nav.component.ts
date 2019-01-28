@@ -7,7 +7,8 @@ import {Component, OnInit} from '@angular/core';
 })
 export class NavComponent implements OnInit {
 
-
+  active: null;
+  subActive: null;
   menuToggle :any;
   // dropdownToggle = false;
   navGroup = [
@@ -22,27 +23,27 @@ export class NavComponent implements OnInit {
       dropdown: [
         {
           title: 'Masonry - style 1',
-          link: 'wedding',
+          link: '/grid-1',
         },
         {
           title: 'Masonry - style 2',
-          link: '',
+          link: '/grid-2',
         },
         {
           title: 'Masonry - style 3',
-          link: '',
+          link: '/grid-3',
         },
         {
           title: 'Masonry - style 4',
-          link: '',
+          link: '/grid-4',
         },
         {
           title: 'Grid - style 1',
-          link: '',
+          link: 'grid-5',
         },
         {
           title: 'Grid - style 2',
-          link: '',
+          link: 'grid-6',
         },
         {
           title: 'Vertical list',
@@ -80,6 +81,15 @@ export class NavComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  setActive(index){
+    if(this.active == index){
+      this.active = null;
+    }else {
+      this.active = index;
+    }
+    this.subActive = null;
   }
 
 }

@@ -125,12 +125,6 @@
       width: 25%;
       height: 100%;
 
-      .nav-hide {
-        .item {
-          transform: rotateX(90deg) !important;
-        }
-      }
-
       .nav-items {
         padding-top: 150px;
 
@@ -156,12 +150,18 @@
             font-size: 18px;
             text-transform: uppercase;
             flex: 70%;
+
+            height: 35px;
+            display: flex;
+            align-items: center;
           }
+
           .dropdown-ico {
             display: flex;
             align-items: center;
             justify-content: center;
             width: 50px;
+            height: 35px;
             padding-left: 40px;
             flex: 8%;
 
@@ -188,6 +188,9 @@
             flex-direction: column;
             flex: 100%;
             padding-left: 28%;
+            height: 0;
+            opacity: 0;
+            transition: all 0.35s linear;
 
             .elem {
               width: 100%;
@@ -218,6 +221,14 @@
             .title {
               color: #e03737;
             }
+          }
+        }
+
+        .item__active{
+
+          .dropdown-group{
+            opacity: 1;
+            height: 320px;
           }
         }
       }

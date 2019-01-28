@@ -62,9 +62,10 @@
 }
 
 .nav {
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100vh;
+  z-index: 2;
 
   .toggle-ico {
     position: fixed;
@@ -141,8 +142,8 @@
           min-height: 35px;
           position: relative;
 
-          transform: rotateX(0deg);
-          transition: all 0.3s linear;
+          transform: rotateX(90deg);
+          transition: all 0.4s linear;
 
           .title {
             font-family: $Rajdhani;
@@ -177,10 +178,6 @@
                 transition: all 0.15s linear;
               }
             }
-          }
-
-          .dd-open {
-
           }
 
           .dropdown-group {
@@ -229,6 +226,12 @@
           .dropdown-group{
             opacity: 1;
             height: 320px;
+          }
+        }
+
+        &__open{
+          .item {
+            transform: rotateX(0deg);
           }
         }
       }

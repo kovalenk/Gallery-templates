@@ -1,5 +1,5 @@
 <div class="nav" [class.nav-open]="menuToggle">
-  <div class="toggle-ico" (click)="menuToggle = !menuToggle">
+  <div class="toggle-ico" (click)="openMenu(menuToggle)">
     <!--<img [src]="menuToggle?'../../../assets/images/nav/logo-black.png':'../../../assets/images/nav/logo-white.png'"-->
           <!--alt="Logo">-->
     <img src="../../../assets/images/nav/logo-black.png"
@@ -7,7 +7,7 @@
   </div>
   <div class="nav-component">
     <div class="menu-container">
-      <div class="nav-items">
+      <div class="nav-items" [class.nav-items__open]="itemsDelay">
         <div class="item" *ngFor="let items of navGroup; index as i;"
              [class.item__active]="active === i">
           <div class="dropdown-ico" (click)="setActive(i)">
@@ -15,8 +15,10 @@
             <div class="lines" *ngIf="items.dropdown"></div>
           </div>
           <div class="title" (click)="setActive(i)">{{items.title}}</div>
-          <div class="dropdown-group">
-            <div class="elem" *ngFor="let elems of items.dropdown" [routerLink]="elems.link" >
+          <div class="dropdown-group" *ngIf="items.dropdown">
+            <div class="elem" *ngFor="let elems of items.dropdown"
+                 [routerLink]="elems.link"
+                 (click)="menuToggle = false; itemsDelay = false">
               {{elems.title}}
             </div>
           </div>

@@ -9,7 +9,8 @@ export class NavComponent implements OnInit {
 
   active: null;
   subActive: null;
-  menuToggle :any;
+  menuToggle = false;
+  itemsDelay = false;
   // dropdownToggle = false;
   navGroup = [
     {
@@ -90,6 +91,20 @@ export class NavComponent implements OnInit {
       this.active = index;
     }
     this.subActive = null;
+  }
+
+  openMenu(status){
+    this.menuToggle = !status;
+
+    if(status === false){
+      setTimeout(() => {
+        this.itemsDelay = !status;
+      }, 700);
+    }
+    else{
+      this.itemsDelay = !status;
+    }
+
   }
 
 }

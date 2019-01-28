@@ -14,7 +14,6 @@ export class NavComponent implements OnInit {
     {
       title: 'Slider',
       dropdownToggle: false,
-      dropdown: true,
       link: '',
     },
     {
@@ -63,7 +62,6 @@ export class NavComponent implements OnInit {
     {
       title: 'Albums',
       dropdownToggle: false,
-      dropdown: true,
       link: '',
     },
     {
@@ -73,7 +71,6 @@ export class NavComponent implements OnInit {
     {
       title: 'contact us',
       dropdownToggle: false,
-      dropdown: true,
       link: '',
     },
   ];

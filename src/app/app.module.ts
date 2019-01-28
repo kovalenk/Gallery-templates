@@ -12,6 +12,7 @@ import { MasonrySt2Component } from './components/galleries/masonry-st2/masonry-
 import { MasonrySt3Component } from './components/galleries/masonry-st3/masonry-st3.component';
 import { MasonrySt4Component } from './components/galleries/masonry-st4/masonry-st4.component';
 import { GridSt1Component } from './components/galleries/grid-st1/grid-st1.component';
+import { GridSt2Component } from './components/galleries/grid-st2/grid-st2.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { GridSt1Component } from './components/galleries/grid-st1/grid-st1.compo
     MasonrySt2Component,
     MasonrySt3Component,
     MasonrySt4Component,
-    GridSt1Component
+    GridSt1Component,
+    GridSt2Component
   ],
   imports: [
     BrowserModule,

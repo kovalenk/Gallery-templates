@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-masonry-st1',
@@ -7,9 +7,56 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MasonrySt1Component implements OnInit {
 
-  constructor() { }
+  navGroup = [
+    {
+      src: '',
+      alt: '',
+    },
+    {
+      src: '',
+      alt: '',
+    },
+    {
+      src: '',
+      alt: '',
+    },
+    {
+      src: '',
+      alt: '',
+    },
+    {
+      src: '',
+      alt: '',
+    },
+    {
+      src: '',
+      alt: '',
+    },
+    {
+      src: '',
+      alt: '',
+    },
+    {
+      src: '',
+      alt: '',
+    },
+    {
+      src: '',
+      alt: '',
+    },
+    {
+      src: '',
+      alt: '',
+    },
+  ];
+
+  constructor() {
+  }
 
   ngOnInit() {
+
+    // var fs = require('fs');
+
   }
 
 }

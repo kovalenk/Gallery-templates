@@ -3,6 +3,9 @@
 :host {
   .nav-open {
     z-index: 1;
+    width: 100%;
+    height: 100vh;
+    margin-left: 0vw;
 
     .toggle-ico {
 
@@ -65,7 +68,9 @@
   position: fixed;
   width: 100%;
   height: 100vh;
+  margin-left: -100vw;
   z-index: 2;
+  transition: all .7s linear .4s;
 
   .toggle-ico {
     position: fixed;

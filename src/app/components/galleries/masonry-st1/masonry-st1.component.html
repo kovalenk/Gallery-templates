@@ -1,6 +1,10 @@
-<div class="grid" >
+<div class="grid">
+  <!--<div *ngFor="let items of navGroup"-->
+  <!--[style.backgroundImage]="'url(../../../../assets/images/gallery/'+ items.src +')'"-->
+  <!--class="photo-element">-->
   <div *ngFor="let items of navGroup"
-       [style.backgroundImage]="'url(../../../../assets/images/gallery/'+ items.src +')'"
        class="photo-element">
+
+    <img src="../../../../assets/images/gallery/{{items.src}}" alt="">
   </div>
 </div>

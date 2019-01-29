@@ -17,7 +17,7 @@ export class MasonrySt1Component implements OnInit {
       alt: '2',
     },
     {
-      src: 'photo_1.jpg',
+      src: 'photo_10.jpg',
       alt: '3',
     },
     {

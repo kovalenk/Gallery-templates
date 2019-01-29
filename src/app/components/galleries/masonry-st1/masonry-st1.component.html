@@ -1,6 +1,9 @@
 <div class="grid" >
-  <div *ngFor="let items of navGroup" style="background-image: url(../../../../assets/images/gallery/photo_1.jpg);     background-position: center;
-    background-size: cover;" ></div>
+  <div *ngFor="let items of navGroup"
+       [style.backgroundImage]="'url(../../../../assets/images/gallery/'+ items.src +')'"
+       class="photo-element">
+
+  </div>
 </div>
 
 <div class="grid">

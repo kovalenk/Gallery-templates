@@ -9,43 +9,43 @@ export class MasonrySt1Component implements OnInit {
 
   navGroup = [
     {
-      src: '',
-      alt: '',
+      src: 'photo_7.jpg',
+      alt: '1',
     },
     {
-      src: '',
-      alt: '',
+      src: 'photo_2.jpg',
+      alt: '2',
     },
     {
-      src: '',
-      alt: '',
+      src: 'photo_1.jpg',
+      alt: '3',
     },
     {
-      src: '',
-      alt: '',
+      src: 'photo_3.jpg',
+      alt: '4',
     },
     {
-      src: '',
-      alt: '',
+      src: 'photo_8.jpg',
+      alt: '5',
     },
     {
-      src: '',
-      alt: '',
+      src: 'photo_4.jpg',
+      alt: '6',
     },
     {
-      src: '',
-      alt: '',
+      src: 'photo_9.jpg',
+      alt: '7',
     },
     {
-      src: '',
-      alt: '',
+      src: 'photo_5.jpg',
+      alt: '8',
     },
     {
-      src: '',
-      alt: '',
+      src: 'photo_10.jpg',
+      alt: '9',
     },
     {
-      src: '',
+      src: 'photo_6.jpg',
       alt: '',
     },
   ];

@@ -1,11 +1,12 @@
-import {AfterViewInit, Component, ElementRef, HostListener, OnInit, QueryList, ViewChildren} from '@angular/core';
+import {Component, ElementRef, HostListener, OnInit, QueryList, ViewChildren} from '@angular/core';
 
 @Component({
   selector: 'app-masonry-st1',
   templateUrl: './masonry-st1.component.html',
   styleUrls: ['./masonry-st1.component.scss']
 })
-export class MasonrySt1Component implements OnInit, AfterViewInit {
+export class MasonrySt1Component implements OnInit{
+
   formulaX:number;
   formulaY:number;
   movementInt = 5;
@@ -53,21 +54,15 @@ export class MasonrySt1Component implements OnInit, AfterViewInit {
     },
   ];
 
-  @ViewChildren('myanchor') anchors: QueryList<any>;
-
-
-
-  constructor(public el: ElementRef<HTMLElement>) {
+  constructor() {
   }
 
   ngOnInit() {
-    // var fs = require('fs');
   }
 
   @HostListener('document:mousemove', ['$event'])
-  onMouseMove(event: MouseEvent) {
+  onMouseMove(event) {
     if(this.inside){
-      console.log(event);
       this.formulaX = (event.offsetX -event.layerX)/this.movementInt;
       this.formulaY = (event.offsetY - event.layerY)/this.movementInt;
       event.target.style.cssText = "transform: scale(1.7, 1.3) translate("+this.formulaX+"px, "+this.formulaY+"px);";
@@ -77,9 +72,5 @@ export class MasonrySt1Component implements OnInit, AfterViewInit {
   onMouseLeave(e){
     this.inside = false;
     e.srcElement.firstChild.style.cssText = "transform: scale(1.45, 1.1) translate(0px, 0px);";
-  }
-
-  ngAfterViewInit(){
-    this.anchors.map(i=>{ console.log(i); })
   }
 }

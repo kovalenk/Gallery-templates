@@ -5,10 +5,10 @@ import {Component, ElementRef, HostListener, OnInit, QueryList, ViewChildren} fr
   templateUrl: './masonry-st1.component.html',
   styleUrls: ['./masonry-st1.component.scss']
 })
-export class MasonrySt1Component implements OnInit{
+export class MasonrySt1Component implements OnInit {
 
-  formulaX:number;
-  formulaY:number;
+  formulaX: number;
+  formulaY: number;
   movementInt = 5;
   inside = false;
   navGroup = [
@@ -62,15 +62,16 @@ export class MasonrySt1Component implements OnInit{
 
   @HostListener('document:mousemove', ['$event'])
   onMouseMove(event) {
-    if(this.inside){
-      this.formulaX = (event.offsetX -event.layerX)/this.movementInt;
-      this.formulaY = (event.offsetY - event.layerY)/this.movementInt;
-      event.target.style.cssText = "transform: scale(1.7, 1.3) translate("+this.formulaX+"px, "+this.formulaY+"px);";
+    if (this.inside) {
+      console.log(event);
+      this.formulaX = (event.offsetX - event.layerX) / this.movementInt;
+      this.formulaY = (event.offsetY - event.layerY) / this.movementInt;
+      event.target.style.transform = "scale(1.3, 1.3) translate(" + this.formulaX + "px, " + this.formulaY + "px)";
     }
   }
 
-  onMouseLeave(e){
+  onMouseLeave(e) {
     this.inside = false;
-    e.srcElement.firstChild.style.cssText = "transform: scale(1.45, 1.1) translate(0px, 0px);";
+    e.srcElement.firstChild.style.transform = "";
   }
 }

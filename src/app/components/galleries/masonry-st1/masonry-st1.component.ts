@@ -6,11 +6,9 @@ import {AfterViewInit, Component, ElementRef, HostListener, OnInit, QueryList, V
   styleUrls: ['./masonry-st1.component.scss']
 })
 export class MasonrySt1Component implements OnInit, AfterViewInit {
-  gradientTop: number;
-  gradientLeft: number;
-  movementX:number;
-  movementY:number;
-  movementInt = 1;
+  formulaX:number;
+  formulaY:number;
+  movementInt = 5;
   inside = false;
   navGroup = [
     {
@@ -70,23 +68,15 @@ export class MasonrySt1Component implements OnInit, AfterViewInit {
   onMouseMove(event: MouseEvent) {
     if(this.inside){
       console.log(event);
-      this.gradientLeft = event.layerX;
-      this.gradientTop = event.layerY;
-      this.movementX = event.movementX + this.movementInt;
-      this.movementY = event.movementY + this.movementInt;
+      this.formulaX = (event.offsetX -event.layerX)/this.movementInt;
+      this.formulaY = (event.offsetY - event.layerY)/this.movementInt;
+      event.target.style.cssText = "transform: scale(1.7, 1.3) translate("+this.formulaX+"px, "+this.formulaY+"px);";
     }
-    // console.log(this.el.nativeElement.offsetLeft);
-  }
-
-  onMouseEnter(e){
-    this.inside = true;
   }
 
   onMouseLeave(e){
-    console.log(e);
-    this.movementX = 0;
-    this.movementY = 0;
     this.inside = false;
+    e.srcElement.firstChild.style.cssText = "transform: scale(1.45, 1.1) translate(0px, 0px);";
   }
 
   ngAfterViewInit(){

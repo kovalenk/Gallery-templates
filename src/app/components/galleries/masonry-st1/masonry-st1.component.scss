@@ -22,6 +22,7 @@
     background-size: cover;
     opacity: .8;
     transition: all .3s linear;
+    transform: none !important;
 
     img{
       transform: scale(1.45, 1.1) translate(0px, 0px);

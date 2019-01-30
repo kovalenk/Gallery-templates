@@ -1,10 +1,16 @@
+{{gradientLeft}} - {{gradientTop}} Status: {{inside}}
+{{movementX}} - {{movementY}}
+
 <div class="grid">
   <!--<div *ngFor="let items of navGroup"-->
   <!--[style.backgroundImage]="'url(../../../../assets/images/gallery/'+ items.src +')'"-->
   <!--class="photo-element">-->
   <div *ngFor="let items of navGroup"
-       class="photo-element">
-
-    <img src="../../../../assets/images/gallery/{{items.src}}" alt="">
+       class="photo-element" #myanchor
+       (mouseover)="onMouseEnter($event)"
+       (mouseleave)="onMouseLeave($event)">
+    <img  [ngStyle]="{'transform': 'scale(1.45, 1.1) translate(' + movementX + 'px, ' + movementY + 'px)'}"
+          src="../../../../assets/images/gallery/{{items.src}}"
+         alt="">
   </div>
 </div>

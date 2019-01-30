@@ -1,12 +1,17 @@
-import {Component, OnInit} from '@angular/core';
+import {AfterViewInit, Component, ElementRef, HostListener, OnInit, QueryList, ViewChildren} from '@angular/core';
 
 @Component({
   selector: 'app-masonry-st1',
   templateUrl: './masonry-st1.component.html',
   styleUrls: ['./masonry-st1.component.scss']
 })
-export class MasonrySt1Component implements OnInit {
-
+export class MasonrySt1Component implements OnInit, AfterViewInit {
+  gradientTop: number;
+  gradientLeft: number;
+  movementX:number;
+  movementY:number;
+  movementInt = 1;
+  inside = false;
   navGroup = [
     {
       src: 'photo_7.jpg',
@@ -50,13 +55,41 @@ export class MasonrySt1Component implements OnInit {
     },
   ];
 
-  constructor() {
+  @ViewChildren('myanchor') anchors: QueryList<any>;
+
+
+
+  constructor(public el: ElementRef<HTMLElement>) {
   }
 
   ngOnInit() {
-
     // var fs = require('fs');
-
   }
 
+  @HostListener('document:mousemove', ['$event'])
+  onMouseMove(event: MouseEvent) {
+    if(this.inside){
+      console.log(event);
+      this.gradientLeft = event.layerX;
+      this.gradientTop = event.layerY;
+      this.movementX = event.movementX + this.movementInt;
+      this.movementY = event.movementY + this.movementInt;
+    }
+    // console.log(this.el.nativeElement.offsetLeft);
+  }
+
+  onMouseEnter(e){
+    this.inside = true;
+  }
+
+  onMouseLeave(e){
+    console.log(e);
+    this.movementX = 0;
+    this.movementY = 0;
+    this.inside = false;
+  }
+
+  ngAfterViewInit(){
+    this.anchors.map(i=>{ console.log(i); })
+  }
 }

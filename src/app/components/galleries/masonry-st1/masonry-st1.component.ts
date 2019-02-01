@@ -7,9 +7,10 @@ import {Component, ElementRef, HostListener, OnInit, QueryList, ViewChildren} fr
 })
 export class MasonrySt1Component implements OnInit {
 
+  active: null;
   formulaX: number;
   formulaY: number;
-  movementInt = 5;
+  movementInt = 4;
   inside = false;
   navGroup = [
     {
@@ -62,8 +63,7 @@ export class MasonrySt1Component implements OnInit {
 
   @HostListener('document:mousemove', ['$event'])
   onMouseMove(event) {
-    if (this.inside) {
-      console.log(event);
+    if (this.inside && event.target.tagName === 'DIV') {
       this.formulaX = (event.offsetX - event.layerX) / this.movementInt;
       this.formulaY = (event.offsetY - event.layerY) / this.movementInt;
       event.target.style.transform = "scale(1.3, 1.3) translate(" + this.formulaX + "px, " + this.formulaY + "px)";
@@ -72,6 +72,7 @@ export class MasonrySt1Component implements OnInit {
 
   onMouseLeave(e) {
     this.inside = false;
-    e.srcElement.firstChild.style.transform = "";
+    this.active = null;
+    e.path[0].firstChild.style.transform = "";
   }
 }

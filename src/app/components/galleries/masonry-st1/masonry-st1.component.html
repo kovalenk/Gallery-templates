@@ -1,12 +1,14 @@
 <div class="grid">
-  <div *ngFor="let items of navGroup"
-       class="photo-element" #myanchor
-       (mouseover)="inside = true;"
-       (mouseleave)="onMouseLeave($event)">
-
-        <div class="photo-bc"
-             [style.backgroundImage]="'url(../../../../assets/images/gallery/'+ items.src +')'">
-
-        </div>
+  <div *ngFor="let items of navGroup; index as i;"
+       class="photo-element"
+       (mouseover)="inside = true; active = i"
+       (mouseleave)="onMouseLeave($event)"
+       [class.photo-element__active]="active === i">
+    <div class="photo-bc"
+         [style.backgroundImage]="'url(../../../../assets/images/gallery/'+ items.src +')'">
+    </div>
+    <div class="zoom-ico">
+      <svg-icon name="zoom-ico" class="test"></svg-icon>
+    </div>
   </div>
 </div>
